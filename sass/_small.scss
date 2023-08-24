@@ -28,7 +28,7 @@ body {
 
 /* header rules */
 header {
-    background-color: #9b87b8;
+    background-color: $primaryColor;
 }
 header img {
     float: left;
@@ -61,7 +61,7 @@ button#hamburgerBtn {
     padding: 0 30px 0 2vw;
 }
 
-nav {background-color: #23cfa7;}
+nav {background-color: $secondaryColor;}
 nav ul {margin: 0; padding: 0; }
 nav li {list-style-type: none;}
 
@@ -83,18 +83,20 @@ main img {
     height: auto;
 }
 
-main h1, main h3 {
-    color: #9b87b8;
-    font-style: italic;
-    margin: .5rem 0 .1rem 0;
-}
-main h1 {font-size: 2rem;}
-main h3{font-size: 1.2rem;}
+main {
+    h1, h3 {
+        color: $primaryColor;
+        font-style: italic;
+        margin: .5rem 0 .1rem 0;
+    }
+    h1 {font-size: 2rem;}
+    h3{font-size: 1.2rem;}
 
-main p {
-    font-size: 1.2rem;
-    margin: 0 0 .3rem 0;
-}
+    p {
+        font-size: 1.2rem;
+        margin: 0 0 .3rem 0;
+    }
+} // end main
 
 
 
@@ -121,7 +123,7 @@ main p {
 
 
 footer {
-    background-color: #9b87b8;
+    background-color: $primaryColor;
     font-size: 1.2rem;
 }
 
