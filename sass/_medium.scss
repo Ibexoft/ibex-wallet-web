@@ -12,14 +12,12 @@ header img {
 
 
 /* GRID */
-.medium-6 {
-    width: 50%;
-}
-
-.medium-4 {
-    width: 33.33333%;
-}
+@for $i from 1 through 12 {
+    $w:($i / 12) * 100%;
+    .medium-#{$i} {flex-basis: $w;}	
+} // end loop
 
 nav button {display: none;}
-nav ul {display: block;}
-nav li {width: 25%; float: left;}
+nav ul {display: flex; flex-wrap: wrap;}
+nav li {width: auto;}
+nav a {padding: .7rem 1rem;}

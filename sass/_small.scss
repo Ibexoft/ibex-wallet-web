@@ -16,22 +16,24 @@ body {
 }
 
 /* GRID */
-.row { clear: both; }
+.row { display: flex; flex-wrap: wrap; }
 .limited {
     max-width: 1140px;
     margin: auto;
 }
 
-.column { float: left; padding: 0 2vw; margin: 0 0 .75rem 0; }
-.small-12 { width: 100%; }
-.small-6 { width: 50%; }
+.column { padding: 0 2vw; margin: 0 0 .75rem 0; }
+
+@for $i from 1 through 12 {
+    $w:($i / 12) * 100%;
+    .small-#{$i} {flex-basis: $w;}	
+} // end loop
 
 /* header rules */
 header {
     background-color: $primaryColor;
 }
 header img {
-    float: left;
     height: 85px;
     padding-right: 10px;
 }
@@ -98,8 +100,6 @@ main {
     }
 } // end main
 
-
-
 .labeled {position: relative;}
 .labeled h6, .labeled p {
     position: absolute;
@@ -118,9 +118,6 @@ main {
     font-weight: 700;
     color: #b00;
 }
-
-
-
 
 footer {
     background-color: $primaryColor;
@@ -141,11 +138,4 @@ footer ul {
 
 footer li {
     padding-bottom: .3rem;
-}
-
-/*----- Clearfix: Force an Element not to collapse -----*/
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
 }
