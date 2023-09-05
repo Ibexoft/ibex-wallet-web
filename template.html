@@ -10,137 +10,192 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,300&display=swap"
         rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/styles.css">
 
     <title>Ibexpenses</title>
 </head>
 
 <body>
+
     <header>
-        <div class="row limited">
-            <section class="column small-12">
-                <h1>IBEXPENSES</h1>
-                <h2>Personal finance assistant</h2>
-            </section>
-        </div> <!-- end row -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-success">
+            <div class="container">
+                <a href="" class="navbar-brand">IBEXPENSES</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item active"><a href="" class="nav-link">Transactions</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Categories</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Accounts</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <nav>
-        <div class="row limited">
-            <button id="hamburgerBtn">&#9776;</button>
-            <ul id="primaryNav">
-                <li class="active"><a href="">Transactions</a></li>
-                <li><a href="">Categories</a></li>
-                <li><a href="">Accounts</a></li>
-                <li><a href="">Settings</a></li>
-            </ul>
-        </div>
-    </nav>
+    <main role="main">
+        <div class="container mt-2">
+            <!-- <div class="row">
+                <img src="images/hero.jpg" alt="Ibexpense Wallet" class="img-fluid">
+            </div> -->
 
-    <main>
-        <div class="row">
-            <!-- <section class="column small-12"> -->
-            <img src="images/hero.jpg" alt="Ibexpense Wallet" width="1140" height="561">
-            <!-- </section> -->
-        </div>
+            <h1 class="my-4">Dashboard</h1>
 
-        <div class="row limited">
-            <section class="column small-12">
-                <h1>Dashboard</h1>
-            </section>
-        </div>
+            <div class="row">
+                <section class="col-sm-6">
+                    <div class="card rounded mb-4 shadow-sm">
+                        <img src="images/graph.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">Expense</h3>
+                            <p class="card-text">Rs200.97</p>
+                        </div>
+                        <div class="card-footer">
+                            <p>View details</p>
+                        </div>
+                    </div>
+                </section>
 
-        <div class="row limited">
-            <section class="column small-12 medium-6 labeled">
-                <h6>Expense</h6>
-                <img src="images/hero.jpg" alt="">
-                <p>Rs200</p>
-            </section>
-            <section class="column small-12 medium-6 labeled">
-                <h6>Balance</h6>
-                <img src="images/hero.jpg" alt="">
-                <p>Rs200</p>
-            </section>
-        </div>
+                <section class="col-sm-6">
+                    <div class="card rounded mb-4 shadow-sm">
+                        <img src="images/graph.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">Balance</h3>
+                            <p class="card-text">Rs14.97</p>
+                        </div>
+                        <div class="card-footer">
+                            <p>View details</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
 
+            <div class="row">
+                <section class="col-sm-6 col-md-4">
+                    <div class="card rounded mb-4 shadow-sm">
+                        <img src="images/graph.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">Last month expense</h3>
+                            <p class="card-text">Rs14.97</p>
+                        </div>
+                        <div class="card-footer">
+                            <p>View details</p>
+                        </div>
+                    </div>
+                </section>
 
-        <div class="row limited">
-            <section class="column small-12">
-                <h1>Stats</h1>
-            </section>
-        </div><!-- end row -->
+                <section class="col-sm-6 col-md-4">
+                    <div class="card rounded mb-4 shadow-sm">
+                        <img src="images/graph.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">Last month income</h3>
+                            <p class="card-text">Rs14.97</p>
+                        </div>
+                        <div class="card-footer">
+                            <p>View details</p>
+                        </div>
+                    </div>
+                </section>
 
-        <div class="row limited">
-            <section class="column small-6 medium-4 large-3">
-                <h3>Last month expense</h3>
-                <img src="images/hero.jpg" alt="">
-                <p>Rs14.97</p>
-            </section>
-            <section class="column small-6 medium-4 large-3">
-                <h3>Last month income</h3>
-                <img src="images/hero.jpg" alt="">
-                <p>Rs18.97</p>
-            </section>
-            <section class="column small-6 medium-4 large-3">
-                <h3>This month expense</h3>
-                <img src="images/hero.jpg" alt="">
-                <p>Rs18.97</p>
-            </section>
-            <section class="column small-6 medium-4 large-3">
-                <h3>This month income</h3>
-                <img src="images/hero.jpg" alt="">
-                <p>Rs18.97</p>
-            </section>
-            <section class="column small-6 medium-4 large-3">
-                <h3>This year expense</h3>
-                <img src="images/hero.jpg" alt="">
-                <p>Rs14.97</p>
-            </section>
-            <section class="column small-6 medium-4 large-3">
-                <h3>This year income</h3>
-                <img src="images/hero.jpg" alt="">
-                <p>Rs21.97</p>
-            </section>
-            <section class="column small-6 medium-4 large-3">
-                <h3>Current balance</h3>
-                <img src="images/hero.jpg" alt="">
-                <p>Rs120.97</p>
-            </section>
+                <section class="col-sm-6 col-md-4">
+                    <div class="card rounded mb-4 shadow-sm">
+                        <img src="images/graph.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">This month expense</h3>
+                            <p class="card-text">Rs14.97</p>
+                        </div>
+                        <div class="card-footer">
+                            <p>View details</p>
+                        </div>
+                    </div>
+                </section>
 
+                <section class="col-sm-6 col-md-4">
+                    <div class="card rounded mb-4 shadow-sm">
+                        <img src="images/graph.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">This month income</h3>
+                            <p class="card-text">Rs14.97</p>
+                        </div>
+                        <div class="card-footer">
+                            <p>View details</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="col-sm-6 col-md-4">
+                    <div class="card rounded mb-4 shadow-sm">
+                        <img src="images/graph.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">This year expense</h3>
+                            <p class="card-text">Rs14.97</p>
+                        </div>
+                        <div class="card-footer">
+                            <p>View details</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="col-sm-6 col-md-4">
+                    <div class="card rounded mb-4 shadow-sm">
+                        <img src="images/graph.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">This year income</h3>
+                            <p class="card-text">Rs14.97</p>
+                        </div>
+                        <div class="card-footer">
+                            <p>View details</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="row">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover shadow-sm">
+                        <thead class="table-success">
+                            <tr>
+                                <th>Category</th>
+                                <th>Account</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Grocery</td>
+                                <td>Cash</td>
+                                <td>Rs580.00</td>
+                            </tr>
+                            <tr>
+                                <td>Restaurant</td>
+                                <td>SCB</td>
+                                <td>Rs1580.00</td>
+                            </tr>
+                            <tr>
+                                <td>Education</td>
+                                <td>Cash</td>
+                                <td>Rs5800.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
     </main>
 
     <footer>
-        <div class="row limited">
-
-            <section class="column small-12 medium-6 large-3">
-                <h2>Location</h2>
-                <ul>
-                    <li>Ibexpenses</li>
-                    <li>Created by <a href="https://ibexoft.com">Ibexoft</a></li>
-                </ul>
-            </section>
-            <section class="column small-12 medium-6 large-3">
-                <h2>Company</h2>
-                <ul>
-                    <li>About</li>
-                    <li>Features</li>
-                    <li>Pricing</li>
-                    <li>Support</li>
-                </ul>
-            </section>
-            <section class="column small-12 medium-6 large-3">
-                <h2>Social</h2>
-                <ul>
-                    <li>Facebook</li>
-                    <li>Twitter</li>
-                    <li>Instagram</li>
-                </ul>
-            </section>
-            <section class="column small-12 medium-6 large-3">
-                <h2>About</h2>
-                <p>&copy; 2023 &bull; all rights reserved.</p>
-            </section>
-        </div> <!-- end row -->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <small class="float-end">Created by <a href="https://ibexoft.com">Ibexoft</a> &copy; 2023 &bull; All rights reserved.</small>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="js/script.js"></script>
