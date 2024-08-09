@@ -1,7 +1,0 @@
-/* GRID */
-@for $i from 1 through 12 {
-    $w:($i / 12) * 100%;
-    .large-#{$i} {flex-basis: $w;}	
-} // end loop
-
-nav ul {margin-left: 2vw;}
