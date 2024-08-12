@@ -1,0 +1,26 @@
+#accounts-main .filter {
+    position: absolute;
+    width: 40px;
+    left: calc(100% - 2.5rem);
+    top: 2px;
+}
+
+#accounts-main .filter .icon {
+    color: #aab7cf;
+}
+
+#accounts-main .filter .icon:focus {
+    color: #4154f1;
+}
+
+#accounts-main .account-card:hover {
+    box-shadow: 0px 0px 10px 0.5px #e8e8e8 !important;
+}
+
+#accounts-main .add-account button{
+    transition: 0.3s ease-in-out;
+}
+#accounts-main .add-account button:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 4px 4px #e8e8e8;
+}
