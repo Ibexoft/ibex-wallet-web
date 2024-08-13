@@ -1,26 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { Suspense, lazy } from 'react';
+import Header from './components/Header.jsx';
 import './App.css'
 import './assets/css/style.css'
-// import './assets/js/main.js'
-import Header from './components/Header.jsx'
-import Home from './pages/Home.jsx'
-import Account from './pages/Accounts.jsx'
+
+const Home = lazy(() => import('./pages/Home.jsx'));
+const Transactions = lazy(() => import('./pages/Transactions.jsx'));
+const Accounts = lazy(() => import('./pages/Accounts.jsx'));
 
 function App() {
-
-
   return (
-    <>
-      <main id="main" className="main">
-        <Header />
-        <Home />
-        {/* <Account /> */}
-      </main>
-    </>
-  )
+    <Router>
+      <Header />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/transactions" element={<Transactions />} />
+          <Route path="/accounts" element={<Accounts />} />
+        </Routes>
+      </Suspense>
+    </Router>
+  );
 }
 
-export default App
+export default App;
