@@ -248,14 +248,14 @@ const Transactions = () => {
             />
             <div className="row">
               <div className="col-md-6">
-                <h1 class="text-center mt-2">Incoming</h1>
+                <h1 className="text-center mt-2">Incoming</h1>
                 <TransactionTable tableInstance={incomeTableInstance} />
               </div>
               <div
                 className="col-md-6 "
                 style={{ borderLeft: "2px solid #ccc" }}
               >
-                <h1 class="text-center mt-2">Outgoing</h1>
+                <h1 className="text-center mt-2">Outgoing</h1>
                 <TransactionTable tableInstance={expenseTableInstance} />
               </div>
             </div>
