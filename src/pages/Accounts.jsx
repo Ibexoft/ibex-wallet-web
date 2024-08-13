@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import PageTitle from '../components/PageTitle'
 import AccountsList from '../components/AccountsList'
 import * as Icon from 'react-bootstrap-icons'
+import * as bootstrap from 'bootstrap'; 
 
 export default function Account() {
 
@@ -18,7 +19,7 @@ export default function Account() {
 
 
     return (
-        <div id='accounts-main'>
+        <div id='accounts-main' className='container'>
             <PageTitle title="Accounts" breadcrumbPages={{ Home: '/', }} />
             {/* End Page Title */}
 
