@@ -1,14 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
-function App() {
+function Header() {
+  const { logout } = useAuth0();
   return (
     <header id="header" className="header fixed-top d-flex align-items-center">
       <div className="d-flex align-items-center justify-content-between">
-        <a href="index.html" className="logo d-flex align-items-center">
+        <Link className="logo d-flex align-items-center" to={"/"}>
           <img src="assets/img/logo.png" alt="" />
           <span className="d-none d-lg-block">Ibex Wallet</span>
-        </a>
+        </Link>
       </div>
       {/* End Logo */}
       {/* Center Navigation */}
@@ -256,7 +258,11 @@ function App() {
                 <hr className="dropdown-divider" />
               </li>
               <li>
-                <a className="dropdown-item d-flex align-items-center" href="#">
+                <a
+                  className="dropdown-item d-flex align-items-center"
+                  href="#"
+                  onClick={() => logout({ returnTo: window.location.origin })}
+                >
                   <i className="bi bi-box-arrow-right" />
                   <span>Sign Out</span>
                 </a>
@@ -272,4 +278,4 @@ function App() {
   );
 }
 
-export default App;
+export default Header;
