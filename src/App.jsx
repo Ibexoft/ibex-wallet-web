@@ -1,12 +1,17 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import React, { Suspense, lazy } from 'react';
-import Header from './components/Header.jsx';
-import './App.css'
-import './assets/css/style.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { Suspense, lazy } from "react";
 
-const Home = lazy(() => import('./pages/Home.jsx'));
-const Transactions = lazy(() => import('./pages/Transactions.jsx'));
-const Accounts = lazy(() => import('./pages/Accounts.jsx'));
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "bootstrap-icons/font/bootstrap-icons.css";
+
+import Header from "./components/Header.jsx";
+import "./App.css";
+import "./assets/css/style.css";
+
+const Home = lazy(() => import("./pages/Home.jsx"));
+const Transactions = lazy(() => import("./pages/Transactions.jsx"));
+const Accounts = lazy(() => import("./pages/Accounts.jsx"));
 
 function App() {
   return (

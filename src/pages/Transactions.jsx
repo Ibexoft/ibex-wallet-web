@@ -4,6 +4,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import { useTable, usePagination, useGlobalFilter } from "react-table";
 import TransactionList from "../components/TransactionList";
 import TransactionTable from "../components/TransactionTable";
+import PageTitle from '../components/PageTitle'
 
 const Transactions = () => {
   const [view, setView] = useState("list");
@@ -204,7 +205,7 @@ const Transactions = () => {
   return (
     <main id="main" className="main">
       <div className="pagetitle d-flex justify-content-between align-items-center">
-        <h1>Transactions</h1>
+      <PageTitle title="Transactions" breadcrumbPages={{ Home: '/', }} />
         <div>
           <button
             className={`btn btn-${
