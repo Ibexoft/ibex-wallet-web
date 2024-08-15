@@ -115,7 +115,10 @@ const Register = () => {
                           id="acceptTerms"
                           required
                         />
-                        <label className="form-check-label" htmlFor="acceptTerms">
+                        <label
+                          className="form-check-label"
+                          htmlFor="acceptTerms"
+                        >
                           I agree and accept the{" "}
                           <a href="#">terms and conditions</a>
                         </label>
@@ -125,15 +128,59 @@ const Register = () => {
                       </div>
                     </div>
                     <div className="col-12">
-                      <button className="btn btn-primary w-100" onClick={() => loginWithRedirect()}>
+                      <button className="btn btn-primary w-100">
                         Create Account
                       </button>
                     </div>
                     <div className="col-12">
-                      <p className="small mb-0">
+                      <p className="small mb-0 text-center">
                         Already have an account?{" "}
-                        <Link to={'/login'}>Log in</Link>
+                        <Link to={"/login"}>Log in</Link>
                       </p>
+                    </div>
+                    <div className="col-12 text-center mt-3 d-flex align-items-center">
+                      <hr className="flex-grow-1" />
+                      <span className="px-2">OR connect with</span>
+                      <hr className="flex-grow-1" />
+                    </div>
+
+                    <div className="col-12 d-flex justify-content-around mt-3">
+                      <button
+                        className="btn btn-light d-flex align-items-center justify-content-center"
+                        style={{
+                          border: "1px solid #ddd",
+                          width: "48px",
+                          height: "48px",
+                          borderRadius: "50%",
+                        }}
+                        onClick={() => loginWithRedirect()}
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 48 48"
+                        >
+                          <path
+                            fill="#4285F4"
+                            d="M24 9.5c3.7 0 6.8 1.2 9.4 3.6l6.9-6.9C35.4 2.6 30.2 0 24 0 14.6 0 6.5 5.8 2.5 14.2l8.1 6.2C12.9 13.1 17.9 9.5 24 9.5z"
+                          />
+                          <path
+                            fill="#34A853"
+                            d="M46.5 24c0-1.5-.1-2.9-.4-4.2H24v8.1h12.7c-.5 2.5-2 4.6-4.3 6.1l6.8 6.9c4-3.6 6.3-8.9 6.3-14.9z"
+                          />
+                          <path
+                            fill="#FBBC05"
+                            d="M10.6 28.3c-1.3-1.1-2.4-2.6-3-4.3l-8.1 6.2C3.7 37 8.9 42.6 15.9 45.2l6.3-7.7c-3.1-1.1-5.7-3.2-7.6-6.2z"
+                          />
+                          <path
+                            fill="#EA4335"
+                            d="M24 48c6.1 0 11.2-2 15-5.4l-6.8-6.9c-2 1.3-4.5 2-7.3 2-6 0-11-4-12.8-9.4l-8.1 6.2c4.1 8.4 12.2 14.2 22.2 14.2z"
+                          />
+                          <path fill="none" d="M0 0h48v48H0z" />
+                        </svg>
+                      </button>
+                      {/* Add similar buttons for other social logins (e.g., Facebook, GitHub) */}
                     </div>
                   </form>
                 </div>
