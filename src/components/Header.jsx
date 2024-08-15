@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
+import { useSelector } from "react-redux";
 
 function Header() {
   const { logout } = useAuth0();
+  const user = useSelector((state) => state.user.userInfo);
+  console.log(user);
   return (
     <header id="header" className="header fixed-top d-flex align-items-center">
       <div className="d-flex align-items-center justify-content-between">
@@ -204,19 +207,25 @@ function Header() {
               data-bs-toggle="dropdown"
             >
               <img
-                src="assets/img/profile-img.jpg"
-                alt="Profile"
+                src={user && user.picture}
+                alt="Profile Picture"
                 className="rounded-circle"
               />
               <span className="d-none d-md-block dropdown-toggle ps-2">
-                K. Anderson
+                {
+                  user && user.given_name
+                }
               </span>
             </a>
             {/* End Profile Iamge Icon */}
             <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
               <li className="dropdown-header">
-                <h6>Kevin Anderson</h6>
-                <span>Web Designer</span>
+                <h6>{
+                  user && user.name
+                }</h6>
+                <span>{
+                  user && user.email
+                }</span>
               </li>
               <li>
                 <hr className="dropdown-divider" />
