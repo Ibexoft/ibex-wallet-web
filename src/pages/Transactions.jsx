@@ -2,9 +2,9 @@
 import React, { useState, useMemo } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { useTable, usePagination, useGlobalFilter } from "react-table";
-import TransactionList from "../components/TransactionList";
-import TransactionTable from "../components/TransactionTable";
-import PageTitle from '../components/PageTitle'
+import TransactionList from "../components/transactions/TransactionList";
+import TransactionTable from "../components/transactions/TransactionTable";
+import PageTitle from '../components/common/PageTitle'
 
 const Transactions = () => {
   const [view, setView] = useState("list");

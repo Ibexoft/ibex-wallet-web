@@ -2,7 +2,7 @@ import React, { Suspense, lazy, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
-import Header from "./components/Header.jsx";
+import Header from "./components/common/Header.jsx";
 import { setUser } from "./stores/slices/userSlice";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
