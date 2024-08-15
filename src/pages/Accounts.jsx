@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
-import PageTitle from "../components/PageTitle";
-import AccountsList from "../components/AccountsList";
+import PageTitle from "../components/common/PageTitle";
+import AccountsList from "../components/accounts/AccountsList";
 import * as Icon from "react-bootstrap-icons";
 
 export default function Account() {

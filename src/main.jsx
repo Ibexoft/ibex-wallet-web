@@ -13,6 +13,7 @@ createRoot(document.getElementById("root")).render(
     clientId="dGRMz3jKrIB0PmphOirqGxN6eCqe2WDO"
     authorizationParams={{
       redirect_uri: 'http://localhost:5173/',  
+      prompt: 'select_account'
     }}
     cacheLocation="localstorage" 
     useRefreshTokens={true} 
