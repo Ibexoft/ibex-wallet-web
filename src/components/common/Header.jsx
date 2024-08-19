@@ -34,6 +34,11 @@ function Header() {
               Accounts
             </Link>
           </li>
+          <li>
+            <Link to="/categories" className="nav-link">
+              Categories
+            </Link>
+          </li>
         </ul>
       </nav>
       {/* Center Navigation */}
@@ -47,7 +52,7 @@ function Header() {
           </li>
           {/* End Search Icon*/}
           <li className="nav-item dropdown">
-            <a className="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <a className="nav-link nav-icon bell-icon" href="#" data-bs-toggle="dropdown">
               <i className="bi bi-bell" />
               <span className="badge bg-primary badge-number">4</span>
             </a>
@@ -116,7 +121,7 @@ function Header() {
           </li>
           {/* End Notification Nav */}
           <li className="nav-item dropdown">
-            <a className="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <a className="nav-link nav-icon msg-icon" href="#" data-bs-toggle="dropdown">
               <i className="bi bi-chat-left-text" />
               <span className="badge bg-success badge-number">3</span>
             </a>
