@@ -15,6 +15,7 @@ const Transactions = lazy(() => import("./pages/Transactions.jsx"));
 const Accounts = lazy(() => import("./pages/Accounts.jsx"));
 const Login = lazy(() => import("./pages/Login.jsx"));
 const Register = lazy(() => import("./pages/Register.jsx"));
+const Categories = lazy(() => import("./pages/Categories.jsx"));
 
 const AuthenticatedRoute = ({ component: Component, redirectTo, ...props }) => {
   const { isAuthenticated, isLoading } = useAuth0();
@@ -57,6 +58,7 @@ function App() {
           <Route path="/" element={<AuthenticatedRoute component={Home} />} />
           <Route path="/transactions" element={<AuthenticatedRoute component={Transactions} />} />
           <Route path="/accounts" element={<AuthenticatedRoute component={Accounts} />} />
+          <Route path="/categories" element={<AuthenticatedRoute component={Categories} />} />
         </Routes>
       </Suspense>
     </>
