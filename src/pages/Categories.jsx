@@ -7,7 +7,9 @@ export default function Categories() {
         <main id="main" className="main">
             <PageTitle title="Categories" breadcrumbPages={{ Home: '/', }} />
 
-            <CategoryList />
+            <div id="categories-main">
+                <CategoryList />
+            </div>
         </main>
     )
 }
