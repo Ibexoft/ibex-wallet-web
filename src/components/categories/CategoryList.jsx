@@ -168,6 +168,7 @@ export default function CategoryList() {
                                 progress: 0,
                                 color: parentCategory.color,
                                 hidden: false,
+                                isDeleteAble : true,
                                 icon: parentCategory.icon, // Use default icon or customize
                                 subCategories: []
                             }
@@ -196,6 +197,18 @@ export default function CategoryList() {
         setCategories(updateCategoryName(categories));
     };
 
+    const deleteCategory = (category) => {
+        const removeCategory = (cats) => {
+            return cats.filter(cat => cat.name !== category.name).map(cat => {
+                if (cat.subCategories.length > 0) {
+                    return { ...cat, subCategories: removeCategory(cat.subCategories) };
+                }
+                return cat;
+            });
+        };
+        setCategories(removeCategory(categories));
+    };
+
     return (
         <div>
             {categories.map((category, index) => (
@@ -205,6 +218,7 @@ export default function CategoryList() {
                     toggleHide={toggleHide}
                     addSubCategory={addSubCategory}
                     editCategory={editCategory}
+                    deleteCategory={deleteCategory}
                 />
             ))}
         </div>
