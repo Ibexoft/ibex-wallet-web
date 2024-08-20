@@ -65,9 +65,9 @@ export default function CategoryListItem({ category, isSubCategory = false, togg
     };
 
     return (
-        <div className={`category-card container ${isSubCategory ? 'ms-auto justify-content-end' : 'm-auto'} position-relative row align-items-center justify-content-between py-2 px-0 rounded my-3 ${isSubCategory ? 'mb-0 pb-1 pt-1' : 'shadow-sm'}`} style={{ background: category.hidden ? '#d6d6d6' : 'white' }}>
-            <div className="d-flex align-items-center col-md-4 col-sm-8 col-10" onClick={handleToggle} style={{ cursor: 'pointer' }}>
-                <div className={`rounded-circle d-flex align-items-center justify-content-center ${category.hidden ? 'bg-secondary' : ''}`} style={{ background: category.color, width: '30px', minWidth: '30px', height: '30px' }}>
+        <div className={`category-card container bg-white ${isSubCategory ? 'ms-auto justify-content-end' : 'm-auto'} position-relative row align-items-center justify-content-between py-2 px-0 rounded my-3 ${isSubCategory ? 'mb-0 pb-1 pt-1' : 'shadow-sm'}`}>
+            <div className={`d-flex align-items-center col-md-4 col-sm-8 col-10 ${category.hidden ? 'opacity-50' : ''}`} onClick={handleToggle} style={{ cursor: category.hidden ? 'default' : 'pointer' }}>
+                <div className={`rounded-circle d-flex align-items-center justify-content-center`} style={{ background: category.color, width: '30px', minWidth: '30px', height: '30px' }}>
                     {category.icon}
                 </div>
                 {!isEditing ? <div className="mx-2">
@@ -130,9 +130,6 @@ export default function CategoryListItem({ category, isSubCategory = false, togg
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div className={`col-12 text-start mt-md-0 mt-2 ms-4 ps-4 ${category.hidden ? 'd-sm-none d-block' : 'd-none'} category-options`}>
-                <a href="#" className="mx-2" onClick={handleHideToggle}>{category.hidden ? 'Show' : 'Hide'}</a>
             </div>
 
             {/* Subcategory Input */}
